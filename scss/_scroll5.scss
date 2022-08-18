@@ -1,0 +1,431 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+/* font-family: 'Song Myung', serif; */
+
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bohyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Bohyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+article {
+    .card {
+        position: absolute;
+        transition: 1s;
+
+        >div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+            transition: 1s ease-in;
+        }
+
+        .page_1 {
+            overflow: hidden;
+            transform-origin: left center;
+
+            >div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+
+                &.page_front {
+                    background-color: rgb(148, 148, 148);
+                    transition: .5s;
+                    transition-delay: .8s;
+
+                    .inner {
+                        position: relative;
+                        margin: 5% auto;
+                        width: 90%;
+                        height: 90%;
+                        border: 1.5px solid rgba(62, 47, 37, .8);
+
+                        .inner {
+                            margin: auto;
+                            margin-top: 2%;
+                            width: 95%;
+                            height: 97%;
+                            border: 1.2px solid rgba(127, 96, 75, 0.8);
+                        }
+
+                        .cover {
+                            position: absolute;
+                            top: 38%;
+                            left: calc(50% - 30%);
+                            width: 60%;
+                            height: 50%;
+                            background-image: url(../korea_img/korea_1.jpg);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            // filter: saturate(60%);
+                            border: 2px solid rgb(204, 188, 188);
+                        }
+
+                        p {
+                            position: absolute;
+                        }
+
+                        p:nth-of-type(1) {
+                            top: 20%;
+                            left: 15%;
+                            width: 70%;
+                            height: 1px;
+                            background-color: rgba(62, 47, 37, .8);
+                        }
+
+                        p:nth-of-type(2) {
+                            top: 21%;
+                            left: 27%;
+                            display: inline-block;
+                            width: 100%;
+                            color: rgb(244, 234, 231);
+                            font: 25px 'Song Myung';
+                            width: 70%;
+                        }
+
+                        p:nth-of-type(3) {
+                            bottom: 1%;
+                            left: calc(50% - 7.5px);
+                            font: 15px 'Song Myung';
+                            color: rgba(62, 47, 37, .8);
+                        }
+                    }
+                }
+
+                &.page_back {
+                    transform: rotateY(180deg);
+                    background-color: #fff;
+                    background-image: url(../img/scroll5_img/pageform.jpeg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    .inner {
+                        position: absolute;
+                        top: calc(50% - 48.5%);
+                        left: calc(50% - 48.5%);
+                        width: 97%;
+                        height: 97%;
+
+                        .photo_card {
+                            position: absolute;
+                            top: 7%;
+                            left: 10%;
+                            width: 42%;
+                            height: 60%;
+                            background-color: rgb(21, 39, 21);
+                            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+                            div.photo_img {
+                                position: absolute;
+                                background-image: url("../italy_img/italy_left_1.JPG");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                top: 3%;
+                                left: calc(50% - 48.5%);
+                                width: 97%;
+                                height: 360px;
+                            }
+
+                            p {
+                                position: absolute;
+                                bottom: 12%;
+                                left: 4%;
+                                color: #fff;
+                                font: bold 20px 'Song Myung';
+                                z-index: 3;
+                            }
+                        }
+
+                        .sticker {
+                            position: absolute;
+                            top: 2%;
+                            left: 40%;
+                            width: 10%;
+                            height: 10%;
+                            border-radius: 50%;
+                            background-color: rgb(209, 217, 208);
+                        }
+                        
+                        img {
+                            position: absolute;
+                        }
+
+                        img:nth-of-type(1) {
+                            bottom: 10%;
+                            width: 100px;
+                            height: 100px;
+                            z-index: 10;
+                            transform: rotate(-10deg);
+                        }
+
+                        img:nth-of-type(2) {
+                            bottom: 10%;
+                            right: 10%;
+                            width: 400px;
+                            height: 130px;
+                            transform: rotate(4deg);
+                        }
+
+                        img:nth-of-type(3), img:nth-of-type(4) {
+                            width: 100px;
+                            height: 30px;
+                        }
+
+                        img:nth-of-type(3) {
+                            bottom: 25%;
+                            left: 23%;
+                            transform: rotate(-22deg);
+                        }
+
+                        img:nth-of-type(4) {
+                            bottom: 7%;
+                            right: 7%;
+                            transform: rotate(-19deg);
+                        }
+
+                        img:nth-of-type(5) {
+                            width: 220px;
+                            height: 300px;
+                            top: 15%;
+                            right: 7%;
+                        }
+
+                        img:nth-of-type(6) {
+                            width: 90px;
+                            top: 13%;
+                            right: 17%;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .page_2 {
+            position: relative;
+            background-color: rgb(255, 255, 255);
+            background-image: url(../img/scroll5_img/pageform.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            .inner {
+                position: absolute;
+                top: calc(50% - 48.5%);
+                left: calc(50% - 48.5%);
+                width: 97%;
+                height: 97%;
+                overflow: hidden;
+                // background-color: yellow;
+
+                .inner_top {
+
+                    img:nth-of-type(1) {
+                        position: absolute;
+                        right: 5%;
+                        width: 120px;
+                        transform: rotate(-40deg);
+                    }
+
+                    img:nth-of-type(2) {
+                        position: absolute;
+                        bottom: 28%;
+                        right: 20%;
+                        width: 35px;
+                        height: 140px;
+                        transform: rotate(85deg);
+                    }
+
+                    p {
+                        position: absolute;
+                        display: inline-block;
+                    }
+
+                    p:not(:first-child) {
+                        font: 23px 'Bohyun';
+                    }
+
+                    p:nth-of-type(1) {
+                        top: 4%;
+                        left: 4%;
+                        color: rgb(35, 30, 29);
+                        font: 40px 'ghanachoco';
+                        letter-spacing: 2px;
+                    }
+
+                    p:nth-of-type(2) {
+                        font: 40px 'ghanachoco';
+                        width: 70%;
+                        left: 15%;
+                        top: 4%;
+                    }
+
+                    p:nth-of-type(3) {
+                        top: 20%;
+                        right: 0;
+                        width: 43%;
+                    }
+
+                    p:nth-of-type(4) {
+                        top: 65%;
+                        left: 5%;
+                        width: 40%;
+                    }
+
+                    .photo_img {
+                        position: absolute;
+                        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .photo_img:nth-of-type(1) {
+                        top: 20%;
+                        left: 5%;
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../italy_img/italy_right_1.JPG");
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    .photo_img:nth-of-type(2) {
+                        right: 5%;
+                        bottom: 7%;
+                        width: 250px;
+                        height: 230px;
+                        background-image: url("../italy_img/italy_right_2.JPG");
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    .sticker{
+                        position: absolute;
+                        width: 9%;
+                        height: 9%;
+                        border-radius: 50%;
+                        background-color: red;
+
+                        &.sticker1 {
+                            top: 15%;
+                            left: 3%;
+                            background-color: rgb(252, 198, 110);
+                        }
+                    }
+
+                    .bar {
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background-color: rgb(166, 159, 159);
+                    }
+                }
+            }
+        }
+    }
+
+    /* flip action */
+    .flip {
+        z-index: 2;
+
+        .page_1,
+        .page_2 {
+            width: 50vw;
+            height: 100vh;
+        }
+
+        .page_1 {
+            transform: rotateY(-180deg);
+
+            .page_front {
+                opacity: 0;
+            }
+
+            .page_back {}
+        }
+
+        .page_2 {
+            box-shadow: inset 5px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+
+
+/* italy css 수정 */
+article.italy {
+    &:nth-of-type(3),  &:nth-of-type(5),  &:nth-of-type(6), &:nth-of-type(8) {
+        #cover_name {
+            left: 18%;
+            font-size: 19px;
+        }
+    }
+
+    &:nth-of-type(4), &:nth-of-type(7){
+        #cover_name {
+            left: 18%;
+        }
+    }
+}   
+
+
+/* spain css 수정 */
+article.spain {
+    &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+        #cover_name {
+            width: 70%;
+            font-size: 17px;
+            left: 17%;
+        }
+    }
+
+    &:nth-of-type(7), &:nth-of-type(8) {
+        #cover_name {
+            font-size: 20px;
+            left: 17%;
+        }
+    }
+}
+
+
+/* korea css 수정 */
+article.korea {
+    #cover_name {
+        left: 40%;
+    }
+    
+    &:nth-of-type(3) {
+        #cover_name {
+            left: 25%;
+        }
+    }
+
+    &:nth-of-type(5) {
+        #cover_name {
+            left: 35%;
+        }
+    }
+
+    &:nth-of-type(7) {
+        #cover_name {
+            left: 30%;
+        }
+    }
+}
+

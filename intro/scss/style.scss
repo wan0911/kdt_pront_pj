@@ -1,0 +1,224 @@
+// common
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  li, ol {
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  //font
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+  // font-family: 'Roboto Slab', serif;
+  // body
+  body{
+    background-color: black;
+    z-index: 20;
+    overflow: hidden;
+   &.on{
+    animation: change 2s linear;
+   }
+  }
+  section{
+    position: relative;
+    height: 100vh;
+    z-index: 20;
+  .middle{
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    font-size: 100px;
+    font-family: 'Roboto Slab', serif;
+    z-index: 20;
+  }
+  .ball{
+    margin-top: -700px;
+    width: 100px;
+    height: 100px;
+    background-color: #FFF;
+    border-radius: 50%;
+    animation: intro 5s linear ;
+    animation-iteration-count: 1;
+    z-index: 20;
+    box-shadow:
+    /* 공 안쪽 그림자 */
+    inset 0 0 4.6px 0 white,
+    inset -13.3px -10px 20px   0 gray,
+    inset -13.3px -10px 23.3px 0 blue,
+    inset -13.3px -10px 33.3px 0 cyan,
+    inset -13.3px -10px 46.3px 0 powderblue;
+    // animation: glow 2s linear infinite alternate;
+    // 1번 값 :	수평 방향의 그림자 오프셋 길이를 나타냅니다. 양수 값을 지정하면 오른쪽에, 음수 값을 지정하면 왼쪽에 그림자가 생깁니다.
+    // 2번 값 :	수직 그림자 오프셋 길이를 나타냅니다. 양수 값을 지정하면 박스 아래에, 음수 값을 지정하면 박스 위에 그림자가 붙습니다.
+    // 3번 값 :	그림자의 흐림 반경(blur radius)을 나타냅니다. 음수 값을 지정할 수는 없습니다. 값이 클수록 그림자의 끝이 흐려지고, 값이 "0"이면 그림자 끝이 흐려지지 않고 선명한 그림자가 됩니다.
+    // 4번 값 :	그림자의 확산 거리(Spread distance)를 나타냅니다. 양수 값을 지정하면 그림자의 전방위로 확대되고, 음수 값을 지정하면 그림자의 크기가 줄어 듭니다. 양수 값을 지정하면 오른쪽에, 음수 값을 지정하면 왼쪽에 그림자가 붙습니다.
+    // 5번 값:	그림자의 색상 (color)을 지정합니다.
+    
+    }
+  
+  .block{
+    width : 100%;
+    height: 600px;
+    margin-top: -600px;
+    margin-left: 0%;
+    background-color: pink;
+    z-index: 25;
+    // border: 1px solid red;
+    &.on{
+      animation: down 2s linear ;
+    }
+  }
+}
+  // }
+  // 공 굴러가유
+
+  // 홀수가 아래
+  @keyframes intro{
+   0%{ // 천장
+    transform: translate(18vw, -50vh);
+    width  : 100px;
+    height : 100px;
+   }  
+   5%{ // 낙하 : 세로 타원
+    width  : 50px;
+    height : 100px;
+   }
+   10%{ // 바닥
+    transform: translate(22vw, 69vh) ;     
+    width  : 150px;
+    height : 50px;
+   } 
+   15%{ // 상승 : 세로 타원
+    width  : 50px;
+    height : 100px;
+   }
+   20%{ // 천장
+    transform: translate(28vw, -40vh) ;     
+    width  : 100px;
+    height : 100px;
+  }
+  25%{ // 낙하 : 세로 타원
+    width  : 80px;
+    height : 100px;
+  }
+  30%{ // 바닥
+    transform: translate(32vw, 69vh) ;  //2번째 글씨박는곳
+    width  : 120px;
+    height : 80px;
+  }
+  35%{ // 상승 : 세로 타원
+    width  : 50px;
+    height : 100px;
+
+  }
+  40%{ // 천장
+    transform: translate(38vw, 28vh);  
+    width  : 100px;
+    height : 100px;
+  }
+  45%{ // 낙하 : 세로 타원
+    width  : 80px;
+    height : 100px;
+    
+  }
+  50%{ // 바닥
+    transform: translate(44vw, 69vh); //3번째 글씨박는곳
+    width  : 120px;
+    height : 80px;
+  }
+  55%{ // 상승 : 세로 타원
+    width  : 50px;
+    height : 100px;
+    
+  }
+  60%{ // 천장
+    transform: translate(56vw, 35vh);
+    width  : 100px;
+    height : 100px;
+  }
+  65%{ // 낙하 : 세로 타원
+    width  : 80px;
+    height : 100px;
+    
+  }
+  70%{ // 바닥
+    transform: translate(62vw, 69vh);
+    width  : 120px;
+    height : 80px;
+  }
+  75%{ // 상승 : 세로 타원
+    width  : 50px;
+    height : 100px;
+
+  }
+  80%{ // 천장
+    transform: translate(72vw, 45vh);   
+    width  : 100px;
+    height : 100px;
+  }
+  85%{ // 낙하 : 세로 타원
+    width  : 80px;
+    height : 100px;
+    
+  }
+  90%{ // 바닥
+    transform: translate(78vw, 69vh);
+    width  : 120px;
+    height : 80px;
+  }
+  95%{ // 상승 : 세로 타원
+    transform: translate(85vw, 45vh);
+    width  : 50px;
+    height : 100px;
+  }
+  100%{ // 낙하 : 세로 타원
+    transform: translate(95vw, 100vh);
+    opacity: 0;
+  }
+}
+
+  @keyframes down{
+    0%{
+      transform: translateY(-2000px);
+      background-color: black;
+    }
+    100%{
+      transform: translateY(2000px);
+      background-color: #2a89ff;
+    }
+  }
+  @keyframes change{
+    0%{
+      background-color: black;
+    }
+    100%{
+      background-color: #2a89ff;
+    }
+  }
+
+  // @keyframes glow {
+  //   from {
+  //     box-shadow:
+  //       /* 공 안쪽 그림자 */
+  //       inset 0 0 4.6px 0 white,
+  //       inset -13.3px -10px 20px 0 gray,
+  //       inset -13.3px -10px 23.3px 0 blue,
+  //       inset -13.3px -10px 33.3px 0 cyan,
+  //       inset -13.3px -10px 46.3px 0 powderblue;
+  //   }
+
+  //   to {
+  //     box-shadow:
+  //       /* 공 안쪽 그림자 */
+  //       inset 0 0 4.6px 0 white,
+  //       inset -13.3px -10px 20px 0 brown,
+  //       inset -13.3px -10px 23.3px 0 blue,
+  //       inset -13.3px -10px 33.3px 0 green,
+  //       inset -13.3px -10px 46.3px 0 powderblue;
+  //   }
+  // }

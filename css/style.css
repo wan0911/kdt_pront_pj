@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/* FONTS*/
+@font-face {
+  font-family: "LeferiPoint-SpecialItalicA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiBaseType-RegularA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* RESET */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* COMMON */
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap");
+  /* font-family: 'Roboto Condensed', sans-serif; */
+}
+section header {
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 3vh 3vw;
+}
+section header a {
+  font: bold 2.5vw "PyeongChangPeace-Bold";
+  color: rgb(16, 27, 111);
+}
+section .scroll_1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #E16262;
+  overflow: hidden;
+  transition: 1s;
+  font-family: "LeferiPoint-SpecialItalicA";
+}
+section .scroll_1 .slide {
+  display: flex;
+  position: absolute;
+}
+section .scroll_1 .slide:nth-of-type(1) {
+  top: calc(20vh - 25px);
+}
+section .scroll_1 .slide:nth-of-type(2) {
+  top: calc(40vh - 25px);
+}
+section .scroll_1 .slide:nth-of-type(3) {
+  top: calc(60vh - 25px);
+}
+section .scroll_1 .slide:nth-of-type(4) {
+  top: calc(80vh - 25px);
+}
+section .scroll_1 .slide.on.slide_L .scroll_wrap.roller_1 {
+  animation: 20s linear 0s infinite normal forwards running rollingleft1;
+}
+section .scroll_1 .slide.on.slide_L .scroll_wrap.roller_2 {
+  animation: 20s linear 0s infinite normal none running rollingleft2;
+}
+section .scroll_1 .slide.on.slide_R .scroll_wrap.roller_1 {
+  animation: 17s linear 0s infinite normal none running rollingright1;
+}
+section .scroll_1 .slide.on.slide_R .scroll_wrap.roller_2 {
+  animation: 17s linear 0s infinite normal forwards running rollingright2;
+}
+section .scroll_1 .slide .scroll_wrap {
+  will-change: transform;
+  white-space: nowrap;
+}
+section .scroll_1 .slide .scroll_wrap > span {
+  font-size: 3vw;
+  word-spacing: 20px;
+  letter-spacing: 5px;
+}
+section .scroll_1 .middle {
+  width: 100%;
+  position: absolute;
+  top: calc(50vh - 40px);
+  text-align: center;
+  font-size: 6vw;
+  font-weight: bold;
+  transition: 0.1s;
+}
+@keyframes rollingright1 { /* 원본용 */
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes rollingright2 { /* 클론용 */
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  50.01% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes rollingleft1 { /* 원본용 */
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.01% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rollingleft2 { /* 클론용 */
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+section .scroll_2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #FABC60;
+  opacity: 0;
+}
+section .scroll_2 > div {
+  display: flex;
+  position: absolute;
+  left: 0;
+}
+section .scroll_2 > div:nth-of-type(1) {
+  top: 20%;
+}
+section .scroll_2 > div:nth-of-type(2) {
+  top: 40%;
+}
+section .scroll_2 > div:nth-of-type(3) {
+  top: 60%;
+}
+section .scroll_2 > div > * {
+  font: 6vw "LeferiPoint-SpecialItalicA";
+  color: white;
+  margin-left: 1.7vw;
+}
+section .scroll_2 > div > *.word4 {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+section .scroll_2 > div > *.word4 li {
+  display: inline-block;
+}
+section .scroll_2 > div > *.word4 .line {
+  width: 0px;
+  height: 1vw;
+  background-color: white;
+  position: absolute;
+  bottom: 15%;
+  opacity: 0.5;
+}
+section .scroll_3 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #3A9679;
+  opacity: 0;
+}
+section .scroll_3 .container {
+  width: 100%;
+  position: absolute;
+}
+section .scroll_3 .container > div {
+  display: flex;
+}
+section .scroll_3 .container > div > div {
+  font: 6.5vw "LeferiPoint-SpecialItalicA";
+  color: white;
+  margin-left: 2vw;
+  opacity: 0;
+}
+section .scroll_3 .container > div > div.w3, section .scroll_3 .container > div > div.w6 {
+  animation: 1s rainbow infinite;
+}
+section .scroll_4 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+section .scroll_4 video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+section .scroll_4 .main_title {
+  width: 100%;
+  position: absolute;
+  top: 12%;
+  left: 0;
+  text-align: center;
+  font: bold 3.6vw/1 "LeferiPoint-SpecialItalicA";
+  color: rgb(226, 226, 233);
+  text-shadow: 3px 3px 5px rgb(126, 126, 126);
+}
+section .scroll_4 .black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transition: 0.8s;
+}
+section .scroll_4 .article_wrapper {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -40%);
+  justify-content: space-evenly;
+}
+section .scroll_4 .article_wrapper article {
+  position: relative;
+  width: 23%;
+  height: 55vh;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1s;
+}
+section .scroll_4 .article_wrapper article .bar {
+  position: absolute;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  background-color: rgb(18, 18, 105);
+}
+section .scroll_4 .article_wrapper article img {
+  position: absolute;
+  right: 17%;
+  width: 60px;
+}
+section .scroll_4 .article_wrapper article div:nth-of-type(2) {
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  font: 19px "Roboto Condensed";
+  letter-spacing: -1px;
+}
+section .scroll_4 .article_wrapper article .line1 {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  width: 70%;
+  height: 5%;
+  border-bottom: 1px solid black;
+}
+section .scroll_4 .article_wrapper article .line1 div:nth-child(1) {
+  transform: translateX(5px);
+  font: bold 15px "Roboto Condensed";
+}
+section .scroll_4 .article_wrapper article .line1 div:nth-child(2) {
+  transform: translateX(130px);
+  font: bold 13px "Roboto Condensed";
+}
+section .scroll_4 .article_wrapper article .line2 {
+  position: absolute;
+  top: 30%;
+  left: 4%;
+  width: 70%;
+  height: 13%;
+}
+section .scroll_4 .article_wrapper article .line2 div:nth-of-type(1) {
+  font: 12px "Roboto Condensed";
+}
+section .scroll_4 .article_wrapper article .line2 div:nth-of-type(2) {
+  transform: translate(-6px, 7px);
+  font: bold 30px "Roboto Condensed";
+}
+section .scroll_4 .article_wrapper article .line3 {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  width: 70%;
+  height: 13%;
+}
+section .scroll_4 .article_wrapper article .line3 div:nth-of-type(1) {
+  font: 11px "Roboto Condensed";
+}
+section .scroll_4 .article_wrapper article .line3 div:nth-of-type(2) {
+  transform: translate(-6px, 7px);
+  font: bold 25px "Roboto Condensed";
+}
+section .scroll_4 .article_wrapper article img:nth-of-type(2) {
+  position: absolute;
+  bottom: 3%;
+  right: 2%;
+  width: 55%;
+  height: 11%;
+  transform: rotate(90deg);
+}
+section .scroll_4 .article_wrapper article img:nth-of-type(3) {
+  position: absolute;
+  bottom: -5%;
+  left: -5%;
+  width: 50%;
+}
+section .scroll_4 .article_wrapper article:nth-of-type(2) .bar {
+  background-color: rgb(191, 74, 60);
+}
+section .scroll_4 .article_wrapper article:nth-of-type(2) .line1 div:nth-child(2) {
+  transform: translateX(99px);
+}
+section .scroll_4 .article_wrapper article:nth-of-type(3) .bar {
+  background-color: rgb(229, 188, 104);
+}
+section .scroll_4 .article_wrapper article:nth-of-type(3) .line1 div:nth-child(2) {
+  transform: translateX(107px);
+}
+
+@keyframes rainbow {
+  0% {
+    color: #ff2a2a;
+  }
+  15% {
+    color: #ff7a2a;
+  }
+  30% {
+    color: #ffc52a;
+  }
+  45% {
+    color: #43ff2a;
+  }
+  60% {
+    color: #2a89ff;
+  }
+  75% {
+    color: #202082;
+  }
+  90% {
+    color: #6b2aff;
+  }
+  100% {
+    color: #e82aff;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

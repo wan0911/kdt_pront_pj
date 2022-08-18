@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  z-index: 20;
+  overflow: hidden;
+}
+body.on {
+  animation: change 2s linear;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  z-index: 20;
+}
+section .middle {
+  margin-top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 100px;
+  font-family: "Roboto Slab", serif;
+  z-index: 20;
+}
+section .ball {
+  margin-top: -700px;
+  width: 100px;
+  height: 100px;
+  background-color: #FFF;
+  border-radius: 50%;
+  animation: intro 5s linear;
+  animation-iteration-count: 1;
+  z-index: 20;
+  box-shadow: inset 0 0 4.6px 0 white, inset -13.3px -10px 20px 0 gray, inset -13.3px -10px 23.3px 0 blue, inset -13.3px -10px 33.3px 0 cyan, inset -13.3px -10px 46.3px 0 powderblue;
+}
+section .block {
+  width: 100%;
+  height: 600px;
+  margin-top: -600px;
+  margin-left: 0%;
+  background-color: pink;
+  z-index: 25;
+}
+section .block.on {
+  animation: down 2s linear;
+}
+
+@keyframes intro {
+  0% {
+    transform: translate(18vw, -50vh);
+    width: 100px;
+    height: 100px;
+  }
+  5% {
+    width: 50px;
+    height: 100px;
+  }
+  10% {
+    transform: translate(22vw, 69vh);
+    width: 150px;
+    height: 50px;
+  }
+  15% {
+    width: 50px;
+    height: 100px;
+  }
+  20% {
+    transform: translate(28vw, -40vh);
+    width: 100px;
+    height: 100px;
+  }
+  25% {
+    width: 80px;
+    height: 100px;
+  }
+  30% {
+    transform: translate(32vw, 69vh);
+    width: 120px;
+    height: 80px;
+  }
+  35% {
+    width: 50px;
+    height: 100px;
+  }
+  40% {
+    transform: translate(38vw, 28vh);
+    width: 100px;
+    height: 100px;
+  }
+  45% {
+    width: 80px;
+    height: 100px;
+  }
+  50% {
+    transform: translate(44vw, 69vh);
+    width: 120px;
+    height: 80px;
+  }
+  55% {
+    width: 50px;
+    height: 100px;
+  }
+  60% {
+    transform: translate(56vw, 35vh);
+    width: 100px;
+    height: 100px;
+  }
+  65% {
+    width: 80px;
+    height: 100px;
+  }
+  70% {
+    transform: translate(62vw, 69vh);
+    width: 120px;
+    height: 80px;
+  }
+  75% {
+    width: 50px;
+    height: 100px;
+  }
+  80% {
+    transform: translate(72vw, 45vh);
+    width: 100px;
+    height: 100px;
+  }
+  85% {
+    width: 80px;
+    height: 100px;
+  }
+  90% {
+    transform: translate(78vw, 69vh);
+    width: 120px;
+    height: 80px;
+  }
+  95% {
+    transform: translate(85vw, 45vh);
+    width: 50px;
+    height: 100px;
+  }
+  100% {
+    transform: translate(95vw, 100vh);
+    opacity: 0;
+  }
+}
+@keyframes down {
+  0% {
+    transform: translateY(-2000px);
+    background-color: black;
+  }
+  100% {
+    transform: translateY(2000px);
+    background-color: #2a89ff;
+  }
+}
+@keyframes change {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: #2a89ff;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

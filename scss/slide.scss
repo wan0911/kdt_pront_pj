@@ -1,0 +1,147 @@
+/* FONTS*/
+@font-face {
+    font-family: 'HeirofLightBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* RESET */
+@import "reset";
+
+/* COMMON */
+figure {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: gray;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    header {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 3vh 3vw;
+        justify-content: space-between;
+        align-items: center;
+        transition: 1s;
+        z-index: 3;
+
+        a {
+            font: bold 2.5vw 'PyeongChangPeace-Bold';
+            color: black;
+            // animation: 2s rainbow infinite;
+        }
+
+        h2 {
+            font: 25px 'HeirofLightBold';
+        }
+    }
+
+    section {
+        width: 25vw;
+        height: 65vh;
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        margin: -32.5vh 0 0 -15vw;
+        transition: 1s;
+
+        article {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            perspective: 1000px;
+            transition: opacity .5s;
+
+            .card {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: 1s;
+                
+                .front, .back {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    backface-visibility: hidden;
+                }
+
+                .front {}
+
+                .back {
+                    transform: rotateY(180deg);
+
+                    background-color: lightcoral;
+
+                    .inner {
+                        display: none;
+                    }
+                }
+            }
+
+            &.on {
+                .card {
+                    transform: rotateY(180deg);
+                    
+                    .back {
+                        width: 103vw;
+                        height: 103vh;
+                        top: -18.5vh;
+                        left: -41vw;
+                        
+                        .inner {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import "scroll5";
+
+
+//mouse animation
+body {
+    cursor: none;
+}
+
+.cursor {
+    position: absolute;
+    z-index: 100;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgba(93, 90, 90, 0.8);
+    border-radius: 50%;    
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+    background-size: cover;
+}
+
+.cursor-grow {
+    transform: scale(1.2);
+    background-color: rgb(93, 90, 90);
+}

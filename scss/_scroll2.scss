@@ -1,0 +1,52 @@
+.scroll_2 {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #FABC60;
+    opacity: 0;
+
+    > div {
+        display: flex;
+        position: absolute;
+        left: 0;
+
+        &:nth-of-type(1) {
+            top: 20%;
+        }
+
+        &:nth-of-type(2) {
+            top: 40%;
+        }
+
+        &:nth-of-type(3) {
+            top: 60%;
+        }
+
+        > * {
+            font: 6vw 'LeferiPoint-SpecialItalicA';
+            color: white;
+            margin-left: 1.7vw;
+
+            &.word4 {
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+
+                li {
+                    display: inline-block;
+                }
+
+                .line {
+                    width: 0px;
+                    height: 1vw;
+                    background-color: white;
+                    position: absolute;
+                    bottom: 15%;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
